@@ -7,7 +7,7 @@ use std::path::PathBuf;
 
 pub use config::load_config;
 pub use data::LangProvider;
-use directories::ProjectDirs;
+use directories_next::ProjectDirs;
 use unicode_segmentation::UnicodeSegmentation;
 
 pub(crate) fn dirs() -> ProjectDirs {
