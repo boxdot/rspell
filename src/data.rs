@@ -32,7 +32,7 @@ impl<'a> FileProvider<'a> {
                 let mut transfer = easy.transfer();
                 transfer
                     .write_function(|data| {
-                        dst.write(data).unwrap();
+                        dst.write_all(data).unwrap();
                         Ok(data.len())
                     })
                     .unwrap();
